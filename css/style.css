@@ -238,9 +238,7 @@ header .intro-text {
 	margin: 15px 0 30px;
 }
 /* Menu Section */
-#restaurant-menu {
-	padding: 0 0 60px 0;
-}
+
 #restaurant-menu .section-title {
 	background: #444 url(../img/menu-bg.jpg) center center no-repeat fixed;
 	background-size: cover;
@@ -256,39 +254,102 @@ header .intro-text {
 	padding: 10px 0;
 	text-transform: uppercase;
 }
-#restaurant-menu .menu-section hr {
-	margin: 0 auto;
-}
-#restaurant-menu .menu-section {
-	margin: 0 20px 80px;
-}
-#restaurant-menu .menu-section-title {
-	font-size: 26px;
-	display: block;
-	font-weight: 500;
-	color: #444;
-	margin: 20px 0;
+.menu-nav {
 	text-align: center;
 }
-#restaurant-menu .menu-item {
-	margin: 35px 0;
-	font-size: 18px;
+
+.menu-nav li {
+	position:relative;
+	display:inline-block;
+	
+	border-bottom: 1px solid #ECECEC;
+	background-color: #FFF;
+	width: 150px;
 }
-#restaurant-menu .menu-item-name {
+
+.menu-nav li + li {
+	-webkit-box-shadow:-1px 0px 0px 0px #ECECEC;
+	        box-shadow:-1px 0px 0px 0px #ECECEC;
+}
+
+.menu-nav li a {
 	font-weight: 600;
-	font-size: 17px;
-	color: #555;
-	border-bottom: 2px dotted rgb(213, 213, 213);
+	display: block;
+	padding: 20px;
 }
-#restaurant-menu .menu-item-description {
+
+.menu-nav li.active a {
+	color: #FFF;
+	background-color:#8eb640;
+}
+
+.menu-nav li.active:before , .menu-nav li.active:after {
+	content:"";
+	width: 0;
+	height: 0;
+	position:absolute;
+	bottom:0;
+	border-style: solid;
+	z-index:1;
+}
+
+.menu-nav li.active:before {
+	left:0;
+	border-width: 20px 60px 0 0;
+	border-color: #8eb640 transparent transparent;
+}
+
+.menu-nav li.active:after {
+	right:0;
+	border-width: 0 60px 20px 0;
+	border-color: transparent #8eb640 transparent ;
+}
+
+/* --- menu content --- */
+#menu-content {
+	overflow:auto;
+	padding:30px 2% 30px;
+	background-color:#FFF;
+}
+
+.single-dish + .single-dish {
+	margin-top:30px;
+}
+
+.single-dish .single-dish-heading {
+	position:relative;
+	z-index:10;
+}
+
+.single-dish .single-dish-heading:before {
+	content:"";
+	display:block;
+	position:relative;
+	top:25px;
+	height:1px;
+	width:100%;
+	border-top:1px dashed #151515;
+	z-index:-1;
+}
+
+.single-dish .name {
+	display: inline-block;
+	font-size: 17px;
+	background-color: #FFF;
+	padding-right: 10px;
+	font-weight:500;
+}
+
+.single-dish .price {
+	float:right;
+	background-color:#FFF;
+	padding-left: 10px;
+	color:#8eb640;
+	font-size: 17px;
+}
+.single-dish p{
 	font-style: italic;
 	font-size: 15px;
-}
-#restaurant-menu .menu-item-price {
-	float: right;
-	font-weight: 600;
-	color: #555;
-	margin-top: -26px;
 }
 /* Portfolio Section */
 #portfolio {
@@ -463,7 +524,7 @@ ol.type li a:hover {
 	padding: 0 10px;
 	font-size: 15px;
 }
-/* Call Reservation Section */
+
 
 /* Footer Section*/
 #footer {
@@ -487,21 +548,24 @@ ol.type li a:hover {
 	background: linear-gradient(to bottom, rgba(119,153,54,1) 0%, rgba(142,182,64,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', endColorstr='#8eb640', GradientType=0 ); /* IE6-9 */
 }
-#footer .social {
-	margin: 10px 0 10px 0;
+.social {
+	margin: 20px auto ;
 }
-#footer .social ul li {
+.social ul li {
 	display: inline-block;
-	margin: 0 20px;
+	margin-top:10px;
+	width: 40px;
+	margin-right: 5px;
+	
 }
-#footer .social i.fa {
-	font-size: 26px;
+.social i.fa {
+	font-size: 35px;
 	padding: 4px;
 	color: #fff;
 	transition: all 0.3s;
 }
-#footer .social i.fa:hover {
-	color: #eee;
+.social i.fa:hover {
+	color: #628d0f;
 }
 #footer p {
 	font-size: 15px;
