@@ -7,6 +7,76 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
+.noscroll {
+	position: fixed;
+	overflow: hidden;
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background: rgba(24, 27, 23, 1);
+}
+
+#spinner {
+	display: none;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -20px;
+	z-index: 101;
+	background-color: #8eb640;
+
+	-webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+	animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+	0% { -webkit-transform: perspective(120px) }
+	50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+	100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+	0% {
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+	} 50% {
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+	} 100% {
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	}
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+.scroll-line {
+    height: 6px;
+    margin-bottom: -2px;
+    background: #8eb640;
+    width: 0%;
+}
 h2 {
 	margin: 0 0 20px 0;
 	font-weight: 500;
@@ -94,16 +164,21 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	padding: 20px;
 	transition: all 0.8s;
 }
+
 #menu.navbar-default {
 	background-color: rgba(248, 248, 248, 0);
 	border-color: rgba(231, 231, 231, 0);
 }
 #menu a.navbar-brand {
-	font-family: 'Dancing Script', cursive;
-	font-size: 36px;
-	color: #8eb640;
-	font-weight: 700;
-	letter-spacing: 1px;
+	font-family: HandmadeDropshadowJNL,sans-serif;
+	color: #B71A11;
+	font-size: 46px;
+	background-color: #fff;
+	border-radius: 2px;
+	padding: 0;
+	height: 40px;
+	padding : 2px 2px 0 2px;
+	margin-top: 4px;
 }
 #menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
@@ -185,18 +260,20 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .intro .overlay {
 	background: rgba(0,0,0,0.4);
 }
+@font-face {
+    font-family: HandmadeDropshadowJNL;
+    src: url(../fonts/fonts/HandmadeDropshadowJNL.ttf);
+}
 .intro h1 {
-	font-family: 'Dancing Script', cursive;
+	font-family: HandmadeDropshadowJNL,sans-serif;
+	
 	color: #fff;
-	font-size: 10em;
-	font-weight: 700;
+	font-size: 8em;
+	
 	margin-top: 0;
 	margin-bottom: 10px;
 }
-.intro span {
-	color: #a7c44c;
-	font-weight: 600;
-}
+
 .intro p {
 	color: #fff;
 	font-size: 32px;
