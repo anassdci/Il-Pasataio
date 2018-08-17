@@ -304,6 +304,7 @@ header .intro-text {
 #about .about-img {
 	display: inline-block;
 	position: relative;
+	width:100%;
 }
 #about .about-img:before {
 	display: block;
@@ -332,6 +333,7 @@ header .intro-text {
 #catering .about-img {
 	display: inline-block;
 	position: relative;
+	width:100%;
 }
 #catering .about-img:before {
 	display: block;
