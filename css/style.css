@@ -90,7 +90,7 @@ h3 {
 	color: #333;
 }
 h4 {
-	font-size: 24px;
+	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 400;
 	color: #333;
@@ -103,6 +103,11 @@ h5 {
 p {
 	font-size: 16px;
 }
+@media screen and (max-width: 600px) {
+	h4 {
+	  font-size: 14px;
+	}
+  }
 p.intro {
 	margin: 12px 0 0;
 	line-height: 24px;
@@ -311,6 +316,34 @@ header .intro-text {
 	border: 1px solid rgba(255, 255, 255, 0.5);
 }
 #about p {
+	line-height: 24px;
+	margin: 15px 0 30px;
+}
+/* catering Section */
+#catering {
+	padding:0 0 120px 0;
+}
+#catering h3 {
+	font-size: 20px;
+}
+#catering .about-text {
+	margin-left: 10px;
+}
+#catering .about-img {
+	display: inline-block;
+	position: relative;
+}
+#catering .about-img:before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	bottom: 8px;
+	left: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+#catering p {
 	line-height: 24px;
 	margin: 15px 0 30px;
 }
@@ -651,6 +684,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', end
 #footer a {
 	color: #f6f6f6;
 }
+#footer a.mail:hover {
+	color: #8eb640;
+}
 #footer a:hover {
 	color: #333;
+}
+
+.impressum h1, .impressum h2{
+	font-size: 24px;
 }
