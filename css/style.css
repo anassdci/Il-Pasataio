@@ -353,6 +353,7 @@ header .intro-text {
 }
 #catering .about-text {
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 #catering .about-img {
   display: inline-block;
